@@ -1,12 +1,17 @@
 {
     "name": "multi-step-form",
     "version": "1.0.0",
+    "type": "module",
     "scripts": {
-      "build": "echo build your frontend app here",
-      "start": "echo start your frontend app here",
-      "test": "cypress run"
+        "build": "vite build",
+        "start": "concurrently \"vite\" \"tsc --watch\"",
+        "test": "cypress run"
     },
     "devDependencies": {
-      "cypress": "^12.17.1"
+        "@types/node": "^22.10.9",
+        "concurrently": "^7.0.0",
+        "cypress": "^12.17.1",
+        "typescript": "^5.7.3",
+        "vite": "^6.0.11"
     }
-  }
+}
